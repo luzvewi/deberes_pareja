@@ -58,23 +58,32 @@ public class pokedex extends JFrame {
 	
 		JPanel panel = new JPanel();
 		panel.setBounds(1, 1, 716, 187);
-		ventana.add(panel);
+		
 		
 		JScrollPane scrollPane = new JScrollPane(panel);
 		scrollPane.setLayout(null);
+		ventana.add(scrollPane);
+		scrollPane.add(panel);
+		scrollPane.setBounds(1, 1, 716, 187);
+		panel.setLayout(null);
+		
 		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(172, 5, 89, 23);
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.setBounds(266, 5, 89, 23);
 		panel.add(btnNewButton_3);
 		
 		JButton btnNewButton_2 = new JButton("New button");
+		btnNewButton_2.setBounds(360, 5, 89, 23);
 		panel.add(btnNewButton_2);
 		
 		JButton btnNewButton_1 = new JButton("New button");
+		btnNewButton_1.setBounds(454, 5, 89, 23);
 		panel.add(btnNewButton_1);
-		scrollPane.setSize(240, 240);
-		scrollPane.setLocation(240, 240);
+		scrollPane.setSize(701, 238);
+		scrollPane.setLocation(10, 96);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		ventana.add(scrollPane,BorderLayout.CENTER);
