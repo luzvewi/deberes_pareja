@@ -61,7 +61,7 @@ public class pokedex extends JFrame {
 		ventana.add(panel);
 		
 		JScrollPane scrollPane = new JScrollPane(panel);
-		scroll
+		scrollPane.setLayout(null);
 		JButton btnNewButton = new JButton("New button");
 		panel.add(btnNewButton);
 		
