@@ -75,6 +75,13 @@ public class pokedex extends JFrame {
 		ventana.setLayout(null);
 		String [] values = new String[] {"charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu"};
 		
+		JTextPane stats = new JTextPane();
+		stats.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
+		stats.setEditable(false);
+		stats.setBounds(666, 417, 513, 418);
+		ventana.add(stats);
+		
+		
 		JTextPane info = new JTextPane();
 		info.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
 		info.setEditable(false);
@@ -101,22 +108,16 @@ public class pokedex extends JFrame {
 		toolBar.setOrientation(SwingConstants.VERTICAL);
 		scrollpane.setViewportView(toolBar);
 		
-		JButton btnNewButton_1 = new JButton("");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				info.setText("poronga");
-				
-			}
-		});
-		btnNewButton_1.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\t.png"));
-		toolBar.add(btnNewButton_1);
-		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 		
 
 			public void mouseClicked(MouseEvent e) {
+				stats.setText("El ataque es: "+ataque+ "\n"
+				+"El ataque especial es: "+ataqueSp+ "\n"
+				+"La defensa es: "+defensa+ "\n"
+				+"La defensa especial es: "+defensaSp+ "\n"
+				+"La velocidad es: "+Velocidad);
 				
 				info.setText("Bulbasaur is a small, quadrupedal amphibian Pokémon that has blue-green skin with darker patches. It has red eyes with white pupils, pointed, ear-like structures on top of its head, and a short, blunt snout with a wide mouth. A pair of small, pointed teeth are visible in the upper jaw when its mouth is open. Each of its thick legs ends with three sharp claws. On Bulbasaur's back is a green plant bulb that conceals two slender, tentacle-like vines, which is grown from a seed planted there at birth. The bulb also provides it with energy through photosynthesis as well as from the nutrient-rich seeds contained within.");
 			}
@@ -138,6 +139,15 @@ public class pokedex extends JFrame {
 		ventana.add(lupa);
 		
 		JButton lupa_1 = new JButton("");
+		lupa_1.addMouseListener(new MouseAdapter() {
+			
+			public void mouseClicked(MouseEvent e) {
+				ventana a= new ventana();
+				a.setVisible(true);
+				setVisible(false);
+				
+			}
+		});
 		lupa_1.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\mas (3).png"));
 		lupa_1.setBounds(40, 98, 58, 45);
 		ventana.add(lupa_1);
@@ -153,10 +163,13 @@ public class pokedex extends JFrame {
 		lblNewLabel_3.setBounds(663, 154, 516, 45);
 		ventana.add(lblNewLabel_3);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setEditable(false);
-		textPane.setBounds(666, 417, 513, 417);
-		ventana.add(textPane);
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
