@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class guardar {
 
 
-public void guardar(int ataque, int ataqueSp, int defensa, int defensaSp, int velocidad) {
+public void guardar (int ataque, int ataqueSp, int defensa, int defensaSp, int velocidad) {
 	
 	ArrayList<Integer> arrayataque = new ArrayList<Integer>();
 	ArrayList<Integer> arrayataqueSp = new ArrayList<Integer>();

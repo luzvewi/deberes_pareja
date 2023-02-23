@@ -26,11 +26,13 @@ public class stats extends JFrame {
 	private JTextField Velocidad;
 	private JLabel lblNewLabel_5;
 	private JButton botonGuardar;
+	int datoataque=0,datoataqueSp=0,datodefensa=0,datodefensaSp=0,datovelocidad=0;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -116,11 +118,16 @@ public class stats extends JFrame {
 				ventana a= new ventana();
 				a.setVisible(true);
 				setVisible(false);
-				
-			}
+			datoataque= Integer.parseInt(ataque.getText());
+			datoataqueSp= Integer.parseInt(ataqueSp.getText());
+			datodefensa= Integer.parseInt(defensa.getText());
+			datodefensaSp= Integer.parseInt(defensaSp.getText());
+			datovelocidad= Integer.parseInt(Velocidad.getText());
+							}
 		});
-		botonGuardar.setBounds(179, 340, 89, 23);
+		botonGuardar.setBounds(219, 340, 89, 23);
 		contentPane.add(botonGuardar);
 	}
+	
 
 }
