@@ -49,6 +49,7 @@ public class pokedex extends JFrame {
 	String defensaSp=" ";
 	String Velocidad=" ";
 	String ataqueSp=" ";
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -155,7 +156,7 @@ public class pokedex extends JFrame {
 		
 		textField = new JTextField();
 		textField.setBounds(119, 108, 469, 35);
-		ventana.add(textField);
+		ventana.add(textField);//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
@@ -163,20 +164,12 @@ public class pokedex extends JFrame {
 		lblNewLabel_3.setBounds(663, 154, 516, 45);
 		ventana.add(lblNewLabel_3);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 
 		
 	}
+	public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
+        System.out.println("El entero recibido es: " + entero1+" El entero recibido es: " + entero2
+        		+" El entero recibido es: " + entero3+" El entero recibido es: " + entero4+" El entero recibido es: " + entero5);
+    }
 }
 

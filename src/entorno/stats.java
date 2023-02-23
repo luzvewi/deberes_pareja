@@ -26,7 +26,8 @@ public class stats extends JFrame {
 	private JTextField Velocidad;
 	private JLabel lblNewLabel_5;
 	private JButton botonGuardar;
-	int datoataque=0,datoataqueSp=0,datodefensa=0,datodefensaSp=0,datovelocidad=0;
+	public int datoataque=0,datoataqueSp=0,datodefensa=0,datodefensaSp=0,datovelocidad=0;
+	pokedex poronga= new pokedex(); //creo un objeto en donde tengo la información 
 
 	/**
 	 * Launch the application.
@@ -45,9 +46,6 @@ public class stats extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public stats() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 635, 451);
@@ -123,11 +121,65 @@ public class stats extends JFrame {
 			datodefensa= Integer.parseInt(defensa.getText());
 			datodefensaSp= Integer.parseInt(defensaSp.getText());
 			datovelocidad= Integer.parseInt(Velocidad.getText());
-							}
+			
+			poronga.recibirEntero(datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad);
+			
+			}
 		});
 		botonGuardar.setBounds(219, 340, 89, 23);
 		contentPane.add(botonGuardar);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+			}
+		});
+		btnNewButton.setBounds(383, 340, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		
 	}
 	
 
+	public int getDatoataque() {
+		return datoataque;
+	}
+
+	public void setDatoataque(int datoataque) {
+		this.datoataque = datoataque;
+	}
+
+	public int getDatoataqueSp() {
+		return datoataqueSp;
+	}
+
+	public void setDatoataqueSp(int datoataqueSp) {
+		this.datoataqueSp = datoataqueSp;
+	}
+
+	public int getDatodefensa() {
+		return datodefensa;
+	}
+
+	public void setDatodefensa(int datodefensa) {
+		this.datodefensa = datodefensa;
+	}
+
+	public int getDatodefensaSp() {
+		return datodefensaSp;
+	}
+
+	public void setDatodefensaSp(int datodefensaSp) {
+		this.datodefensaSp = datodefensaSp;
+	}
+
+	public int getDatovelocidad() {
+		return datovelocidad;
+	}
+
+	public void setDatovelocidad(int datovelocidad) {
+		this.datovelocidad = datovelocidad;
+	}
 }
