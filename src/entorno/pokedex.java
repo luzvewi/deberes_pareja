@@ -49,6 +49,8 @@ public class pokedex extends JFrame {
 	int defensaSp;
 	int Velocidad;
 	int ataqueSp;
+	String nombreP=" ";
+	String descripcionP=" ";
 	ArrayList<Integer> array = new ArrayList<Integer>();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -63,20 +65,8 @@ public class pokedex extends JFrame {
 		});
 	}
 	
-	/*public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
-        System.out.println("El entero recibido es: " + entero1+" El entero recibido es: " + entero2
-        		+" El entero recibido es: " + entero3+" El entero recibido es: " + entero4+" El entero recibido es: " + entero5);
-        
-        // array.add(entero1);
-        // array.add(entero2);
-        // array.add(entero3);
-        // array.add(entero4);
-        // array.add(entero5);
-    }
-	*/
 	public pokedex() {
 
-		//ataque=array.get(1);ataqueSp=array.get(2);defensa=array.get(3);defensaSp=array.get(4);Velocidad=array.get(5);
 		
 		setTitle("pokedex");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -138,7 +128,7 @@ public class pokedex extends JFrame {
 				+"La defensa especial es: "+defensaSp+ "\n"
 				+"La velocidad es: "+Velocidad);
 				
-				info.setText("Bulbasaur is a small, quadrupedal amphibian Pokémon that has blue-green skin with darker patches. It has red eyes with white pupils, pointed, ear-like structures on top of its head, and a short, blunt snout with a wide mouth. A pair of small, pointed teeth are visible in the upper jaw when its mouth is open. Each of its thick legs ends with three sharp claws. On Bulbasaur's back is a green plant bulb that conceals two slender, tentacle-like vines, which is grown from a seed planted there at birth. The bulb also provides it with energy through photosynthesis as well as from the nutrient-rich seeds contained within.");
+				info.setText(descripcionP);
 			}
 		});
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\Bulbasaur.png"));
@@ -189,11 +179,5 @@ public class pokedex extends JFrame {
 
 		
 	}
-
-	public void recibirEntero2(String a,String b) { 
-        System.out.println("El entero recibido es: " + a+" El entero recibido es: " + b);
-        
-        
-    }
 }
 
