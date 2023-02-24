@@ -27,6 +27,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.ListSelectionModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
@@ -38,18 +40,16 @@ import javax.swing.JSlider;
 
 public class pokedex extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel ventana;
-	private JTextField textField;
-	String ataque=" ";
-	String defensa=" ";
-	String defensaSp=" ";
-	String Velocidad=" ";
-	String ataqueSp=" ";
-
+	private JTextField textField;   
+	int ataque=0;
+	int defensa=0;
+	int defensaSp=0;
+	int Velocidad=0;
+	int ataqueSp=0;
+	ArrayList<Integer> array = new ArrayList<Integer>();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -63,8 +63,20 @@ public class pokedex extends JFrame {
 		});
 	}
 	
+	public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
+        System.out.println("El entero recibido es: " + entero1+" El entero recibido es: " + entero2
+        		+" El entero recibido es: " + entero3+" El entero recibido es: " + entero4+" El entero recibido es: " + entero5);
+        
+        // array.add(entero1);
+        // array.add(entero2);
+        // array.add(entero3);
+        // array.add(entero4);
+        // array.add(entero5);
+    }
+	
 	public pokedex() {
-		
+
+		//ataque=array.get(1);ataqueSp=array.get(2);defensa=array.get(3);defensaSp=array.get(4);Velocidad=array.get(5);
 		
 		setTitle("pokedex");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -76,11 +88,11 @@ public class pokedex extends JFrame {
 		ventana.setLayout(null);
 		String [] values = new String[] {"charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu","flareon","mewto","raichu","charizard","pikachu","bulbasur","raiquaza","flareon","mewto","raichu"};
 		
-		JTextPane stats = new JTextPane();
-		stats.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
-		stats.setEditable(false);
-		stats.setBounds(666, 417, 513, 418);
-		ventana.add(stats);
+		JTextPane stats2 = new JTextPane();
+		stats2.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
+		stats2.setEditable(false);
+		stats2.setBounds(666, 417, 513, 418);
+		ventana.add(stats2);
 		
 		
 		JTextPane info = new JTextPane();
@@ -114,7 +126,7 @@ public class pokedex extends JFrame {
 		
 
 			public void mouseClicked(MouseEvent e) {
-				stats.setText("El ataque es: "+ataque+ "\n"
+				stats2.setText("El ataque es: "+ataque+ "\n"
 				+"El ataque especial es: "+ataqueSp+ "\n"
 				+"La defensa es: "+defensa+ "\n"
 				+"La defensa especial es: "+defensaSp+ "\n"
@@ -156,7 +168,7 @@ public class pokedex extends JFrame {
 		
 		textField = new JTextField();
 		textField.setBounds(119, 108, 469, 35);
-		ventana.add(textField);//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		ventana.add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
@@ -164,12 +176,19 @@ public class pokedex extends JFrame {
 		lblNewLabel_3.setBounds(663, 154, 516, 45);
 		ventana.add(lblNewLabel_3);
 		
+		
+		
+		
+		
 
 		
 	}
-	public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
-        System.out.println("El entero recibido es: " + entero1+" El entero recibido es: " + entero2
-        		+" El entero recibido es: " + entero3+" El entero recibido es: " + entero4+" El entero recibido es: " + entero5);
+
+	public void recibirEntero2(String a,String b) { 
+        System.out.println("El entero recibido es: " + a+" El entero recibido es: " + b);
+        
+        
     }
+	
 }
 

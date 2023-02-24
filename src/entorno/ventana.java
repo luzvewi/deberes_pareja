@@ -16,8 +16,11 @@ import java.awt.event.MouseEvent;
 public class ventana extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField nombre;
+	private JTextField descripcion;
+	String nom=" ";
+	String descripzao=" ";
+	pokedex poronga2= new pokedex(); 
 
 	/**
 	 * Launch the application.
@@ -67,15 +70,15 @@ public class ventana extends JFrame {
 		lblNewLabel_1_2.setBounds(10, 116, 106, 24);
 		contentPane.add(lblNewLabel_1_2);
 		
-		textField = new JTextField();
-		textField.setBounds(81, 85, 283, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		nombre = new JTextField();
+		nombre.setBounds(81, 85, 283, 20);
+		contentPane.add(nombre);
+		nombre.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(108, 120, 256, 113);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		descripcion = new JTextField();
+		descripcion.setBounds(108, 120, 256, 113);
+		contentPane.add(descripcion);
+		descripcion.setColumns(10);
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.addMouseListener(new MouseAdapter() {
@@ -97,10 +100,15 @@ public class ventana extends JFrame {
 				pokedex c= new pokedex();
 				c.setVisible(true);
 				setVisible(false);
+				nom= nombre.getText();
+				descripzao= descripcion.getText();
+				
+				poronga2.recibirEntero2(nom,descripzao);
 				
 			}
 		});
 		btnNewButton_1.setBounds(160, 394, 383, 30);
 		contentPane.add(btnNewButton_1);
 	}
+	
 }

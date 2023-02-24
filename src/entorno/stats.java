@@ -113,7 +113,7 @@ public class stats extends JFrame {
 		botonGuardar = new JButton("Guardar");
 		botonGuardar.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				ventana a= new ventana();
+				pokedex a= new pokedex();
 				a.setVisible(true);
 				setVisible(false);
 			datoataque= Integer.parseInt(ataque.getText());
@@ -128,16 +128,6 @@ public class stats extends JFrame {
 		});
 		botonGuardar.setBounds(219, 340, 89, 23);
 		contentPane.add(botonGuardar);
-		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				
-			}
-		});
-		btnNewButton.setBounds(383, 340, 89, 23);
-		contentPane.add(btnNewButton);
 		
 		
 	}
@@ -181,5 +171,5 @@ public class stats extends JFrame {
 
 	public void setDatovelocidad(int datovelocidad) {
 		this.datovelocidad = datovelocidad;
-	}
+	}	
 }
