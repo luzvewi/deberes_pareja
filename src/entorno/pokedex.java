@@ -44,11 +44,11 @@ public class pokedex extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel ventana;
 	private JTextField textField;   
-	int ataque=0;
-	int defensa=0;
-	int defensaSp=0;
-	int Velocidad=0;
-	int ataqueSp=0;
+	int ataque;
+	int defensa;
+	int defensaSp;
+	int Velocidad;
+	int ataqueSp;
 	ArrayList<Integer> array = new ArrayList<Integer>();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -63,7 +63,7 @@ public class pokedex extends JFrame {
 		});
 	}
 	
-	public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
+	/*public void recibirEntero(int entero1,int entero2,int entero3,int entero4,int entero5) { //le digo que tiene que mandar estas variables, aqui es donde las recibe
         System.out.println("El entero recibido es: " + entero1+" El entero recibido es: " + entero2
         		+" El entero recibido es: " + entero3+" El entero recibido es: " + entero4+" El entero recibido es: " + entero5);
         
@@ -73,7 +73,7 @@ public class pokedex extends JFrame {
         // array.add(entero4);
         // array.add(entero5);
     }
-	
+	*/
 	public pokedex() {
 
 		//ataque=array.get(1);ataqueSp=array.get(2);defensa=array.get(3);defensaSp=array.get(4);Velocidad=array.get(5);
@@ -117,6 +117,11 @@ public class pokedex extends JFrame {
 		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\borde pokemon.png"));
 		scrollpane.setRowHeaderView(lblNewLabel_2);
 		
+		ArrayList<Integer> pokemon = new ArrayList<Integer>();
+		//pokemon.add(ataque,defensa,Velocidad,ataqueSp,defensaSp);
+		
+		
+		
 		JToolBar toolBar = new JToolBar();
 		toolBar.setOrientation(SwingConstants.VERTICAL);
 		scrollpane.setViewportView(toolBar);
@@ -126,6 +131,7 @@ public class pokedex extends JFrame {
 		
 
 			public void mouseClicked(MouseEvent e) {
+				
 				stats2.setText("El ataque es: "+ataque+ "\n"
 				+"El ataque especial es: "+ataqueSp+ "\n"
 				+"La defensa es: "+defensa+ "\n"
@@ -189,6 +195,5 @@ public class pokedex extends JFrame {
         
         
     }
-	
 }
 

@@ -26,8 +26,8 @@ public class stats extends JFrame {
 	private JTextField Velocidad;
 	private JLabel lblNewLabel_5;
 	private JButton botonGuardar;
-	public int datoataque=0,datoataqueSp=0,datodefensa=0,datodefensaSp=0,datovelocidad=0;
-	pokedex poronga= new pokedex(); //creo un objeto en donde tengo la información 
+	public int datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad;
+	/*pokedex poronga= new pokedex(); */
 
 	/**
 	 * Launch the application.
@@ -110,10 +110,13 @@ public class stats extends JFrame {
 		lblNewLabel_5.setBounds(117, 287, 95, 19);
 		contentPane.add(lblNewLabel_5);
 		
+		
+		
 		botonGuardar = new JButton("Guardar");
 		botonGuardar.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				pokedex a= new pokedex();
+				
 				a.setVisible(true);
 				setVisible(false);
 			datoataque= Integer.parseInt(ataque.getText());
@@ -122,7 +125,13 @@ public class stats extends JFrame {
 			datodefensaSp= Integer.parseInt(defensaSp.getText());
 			datovelocidad= Integer.parseInt(Velocidad.getText());
 			
-			poronga.recibirEntero(datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad);
+			a.Velocidad=datovelocidad;
+			a.ataque=datoataque;
+			a.defensa=datodefensa;
+			a.defensaSp=datodefensaSp;
+			a.ataqueSp=datoataqueSp;
+			
+			/*poronga.recibirEntero(datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad);*/
 			
 			}
 		});
