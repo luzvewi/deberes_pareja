@@ -12,6 +12,8 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextPane;
+import java.awt.Color;
 
 public class stats extends JFrame {
 
@@ -27,11 +29,13 @@ public class stats extends JFrame {
 	private JLabel lblNewLabel_5;
 	private JButton botonGuardar;
 	public int datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad;
-	/*pokedex poronga= new pokedex(); */
+	String nombreS=" ";
+	String descripcionS=" ";
+	private JTextPane descripcionStats;
+	private JTextField nombreStats;
+	
 
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		
 		EventQueue.invokeLater(new Runnable() {
@@ -48,12 +52,20 @@ public class stats extends JFrame {
 
 	public stats() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 635, 451);
+		setBounds(100, 100, 665, 553);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_6 = new JLabel("Descripcion:");
+		lblNewLabel_6.setBounds(364, 342, 77, 19);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("Nombre:");
+		lblNewLabel_7.setBounds(361, 317, 46, 14);
+		contentPane.add(lblNewLabel_7);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\absiu.png"));
@@ -69,6 +81,19 @@ public class stats extends JFrame {
 		ataque.setBounds(107, 206, 86, 20);
 		contentPane.add(ataque);
 		ataque.setColumns(10);
+		
+		nombreStats = new JTextField();
+		nombreStats.setBackground(new Color(255, 255, 255));
+		nombreStats.setEditable(false);
+		nombreStats.setColumns(10);
+		nombreStats.setBounds(422, 314, 203, 20);
+		contentPane.add(nombreStats);
+		
+		descripcionStats = new JTextPane();
+		descripcionStats.setEditable(false);
+		descripcionStats.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
+		descripcionStats.setBounds(364, 360, 261, 119);
+		contentPane.add(descripcionStats);
 		
 		defensa = new JTextField();
 		defensa.setColumns(10);
@@ -117,6 +142,7 @@ public class stats extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				pokedex a= new pokedex();
 				
+				
 				a.setVisible(true);
 				setVisible(false);
 			datoataque= Integer.parseInt(ataque.getText());
@@ -130,13 +156,32 @@ public class stats extends JFrame {
 			a.defensa=datodefensa;
 			a.defensaSp=datodefensaSp;
 			a.ataqueSp=datoataqueSp;
+			a.nombreP=nombreS;
+			a.descripcionP=descripcionS;
 			
-			/*poronga.recibirEntero(datoataque,datoataqueSp,datodefensa,datodefensaSp,datovelocidad);*/
 			
 			}
 		});
 		botonGuardar.setBounds(219, 340, 89, 23);
 		contentPane.add(botonGuardar);
+		
+		JButton Actualizar = new JButton("Actualizar");
+		Actualizar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				descripcionStats.setText(descripcionS);
+				nombreStats.setText(nombreS);
+			}
+		});
+		Actualizar.setBounds(448, 480, 112, 23);
+		contentPane.add(Actualizar);
+		
+		
+		
+		
+		
+		
+		
 		
 		
 	}

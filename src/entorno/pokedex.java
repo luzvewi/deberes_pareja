@@ -51,6 +51,8 @@ public class pokedex extends JFrame {
 	int ataqueSp;
 	String nombreP=" ";
 	String descripcionP=" ";
+	int contador=1;
+	int patata=0;
 	ArrayList<Integer> array = new ArrayList<Integer>();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -107,9 +109,6 @@ public class pokedex extends JFrame {
 		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\borde pokemon.png"));
 		scrollpane.setRowHeaderView(lblNewLabel_2);
 		
-		ArrayList<Integer> pokemon = new ArrayList<Integer>();
-		//pokemon.add(ataque,defensa,Velocidad,ataqueSp,defensaSp);
-		
 		
 		
 		JToolBar toolBar = new JToolBar();
@@ -122,21 +121,17 @@ public class pokedex extends JFrame {
 
 			public void mouseClicked(MouseEvent e) {
 				
-				stats2.setText("El ataque es: "+ataque+ "\n"
-				+"El ataque especial es: "+ataqueSp+ "\n"
-				+"La defensa es: "+defensa+ "\n"
-				+"La defensa especial es: "+defensaSp+ "\n"
-				+"La velocidad es: "+Velocidad);
+				stats2.setText("El ataque es: "+213+ "\n"
+				+"El ataque especial es: "+345+ "\n"
+				+"La defensa es: "+754+ "\n"
+				+"La defensa especial es: "+23+ "\n"
+				+"La velocidad es: "+43);
 				
 				info.setText(descripcionP);
 			}
 		});
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\Bulbasaur.png"));
 		toolBar.add(btnNewButton);
-		
-		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\Bulbasaur.png"));
-		toolBar.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\menu pokedex.png"));
@@ -147,21 +142,6 @@ public class pokedex extends JFrame {
 		lupa.setBounds(598, 96, 58, 45);
 		ventana.add(lupa);
 		
-		JButton lupa_1 = new JButton("");
-		lupa_1.addMouseListener(new MouseAdapter() {
-			
-			public void mouseClicked(MouseEvent e) {
-				ventana a= new ventana();
-				a.setVisible(true);
-				setVisible(false);
-				
-			}
-		});
-		lupa_1.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\mas (3).png"));
-		lupa_1.setBounds(40, 98, 58, 45);
-		ventana.add(lupa_1);
-		
-		
 		textField = new JTextField();
 		textField.setBounds(119, 108, 469, 35);
 		ventana.add(textField);
@@ -171,6 +151,51 @@ public class pokedex extends JFrame {
 		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\imagen_2023-02-22_205004229.png"));
 		lblNewLabel_3.setBounds(663, 154, 516, 45);
 		ventana.add(lblNewLabel_3);
+		
+		JButton crear = new JButton("creaR");
+		crear.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				JButton ad=new JButton("");
+				ad.setBounds(400, 98, 508, 45);
+				ad.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\adafaewrf (3).png"));
+				ad.setVisible(true);
+				toolBar.add(ad);
+				ad.addMouseListener(new MouseAdapter() {
+					
+
+					public void mouseClicked(MouseEvent e) {
+						
+						stats2.setText("El ataque es:"+ataque+ "\n"
+						+"El ataque especial es: "+ataqueSp+ "\n"
+						+"La defensa es: "+defensa+ "\n"
+						+"La defensa especial es: "+defensaSp+ "\n"
+						+"La velocidad es: "+Velocidad);
+						
+						info.setText(descripcionP);
+					}
+				});
+					
+					
+				
+			}
+		});
+		crear.setBounds(283, 74, 89, 23);
+		ventana.add(crear);
+		JButton editar = new JButton("Editar");
+		editar.addMouseListener(new MouseAdapter() {
+			
+			public void mouseClicked(MouseEvent e) {
+				
+				ventana a= new ventana();
+				a.setVisible(true);
+				setVisible(false);
+			
+			}
+		});
+		editar.setIcon(null);
+		editar.setBounds(40, 98, 69, 45);
+		ventana.add(editar);
 		
 		
 		

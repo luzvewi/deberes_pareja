@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import javax.swing.JTextPane;
 
 public class ventana extends JFrame {
 
@@ -27,7 +28,6 @@ public class ventana extends JFrame {
 	String nom=" ";
 	String descripzao=" ";
 	pokedex poronga2= new pokedex(); 
-	private JTextField descripcion;
 
 	/**
 	 * Launch the application.
@@ -57,15 +57,15 @@ public class ventana extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		descripcion = new JTextField();
-		descripcion.setBounds(104, 120, 260, 111);
-		contentPane.add(descripcion);
-		descripcion.setColumns(10);
-		
 		nombre = new JTextField();
 		nombre.setBounds(81, 85, 283, 20);
 		contentPane.add(nombre);
 		nombre.setColumns(10);
+		
+		JTextPane descripcion = new JTextPane();
+		descripcion.setFont(new Font("Source Code Pro ExtraLight", Font.PLAIN, 12));
+		descripcion.setBounds(103, 116, 261, 119);
+		contentPane.add(descripcion);
 		
 		JLabel lblNewLabel = new JLabel("Añadir Pokemon");
 		lblNewLabel.setFont(new Font("Verdana", Font.ITALIC, 25));
@@ -117,12 +117,12 @@ public class ventana extends JFrame {
 				stats b= new stats();
 				b.setVisible(true);
 				setVisible(false);
-				pokedex d= new pokedex();
+				
 				nom= nombre.getText();
 				descripzao= descripcion.getText();
 				
-				d.nombreP=nom;
-				d.descripcionP=descripzao;
+				b.nombreS=nom;
+				b.descripcionS=descripzao;
 			}
 		});
 		btnNewButton2.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\absiu.png"));
@@ -146,6 +146,8 @@ public class ventana extends JFrame {
 		});
 		btnNewButton_1.setBounds(46, 394, 383, 30);
 		contentPane.add(btnNewButton_1);
+		
+		
 		
 		
 	}
