@@ -158,7 +158,7 @@ public class pokedex extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				JButton ad=new JButton("");
 				ad.setBounds(400, 98, 508, 45);
-				ad.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\adafaewrf (3).png"));
+				ad.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\charizar.png"));
 				ad.setVisible(true);
 				toolBar.add(ad);
 				ad.addMouseListener(new MouseAdapter() {
