@@ -5,38 +5,21 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
-
-
-import java.awt.BorderLayout;
-import java.awt.Component;
 import javax.swing.ScrollPaneConstants;
 import java.awt.Color;
 import javax.swing.SwingConstants;
-import javax.swing.JScrollBar;
-import java.awt.Button;
 import java.awt.Font;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
-import java.awt.Panel;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.ListSelectionModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JSplitPane;
-import javax.swing.JTabbedPane;
 import javax.swing.JToolBar;
 import javax.swing.JTextPane;
-import javax.swing.AbstractListModel;
-import javax.swing.JSlider;
 
 public class pokedex extends JFrame {
 
