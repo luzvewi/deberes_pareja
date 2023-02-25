@@ -110,7 +110,12 @@ public class pokedex extends JFrame {
 				+"La defensa especial es: "+23+ "\n"
 				+"La velocidad es: "+43);
 				
-				info.setText(descripcionP);
+				info.setText("Bulbasaur es un Pokémon cuadrúpedo de color verde, posee manchas de una tonalidad más oscura del "
+						+ "mismo color con distintas formas geométricas. Su cabeza representa cerca de un tercio de su cuerpo. "
+						+ "En su frente se ubican tres manchas que pueden cambiar de posición, forma o lugar dependiendo del ejemplar. "
+						+ "Tiene como orejas muñones pequeños y puntiagudos. Sus ojos son grandes y de color rojo. Sus patas son cortas y posee tres garras en cada una. "
+						+ "Este Pokémon tiene plantado un bulbo en el lomo desde que nace, esta semilla crece y se desarrolla a lo largo del ciclo de vida de Bulbasaur a medida que "
+						+ "suceden sus evoluciones\\r\\n\"");
 			}
 		});
 		btnNewButton.setIcon(new ImageIcon("C:\\Users\\luzvewi\\Downloads\\Bulbasaur.png"));
