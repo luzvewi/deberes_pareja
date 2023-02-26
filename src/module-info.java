@@ -2,9 +2,9 @@
  * 
  */
 /**
- * @author 1DAM
+ * @author AtomicZXZ
  *
  */
-module entorno {
+module pokedex {
 	requires java.desktop;
 }
